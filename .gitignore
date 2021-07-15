@@ -7,7 +7,7 @@ dist-ssr
 # production
 /main
 /dist
-/src/out
+/src/.out
 
 # debug
 npm-debug.log*
@@ -19,3 +19,4 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.idea

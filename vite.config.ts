@@ -14,7 +14,7 @@ export default ({ command }: ConfigEnv): UserConfig => {
         '/@': srcRoot,
       },
       build: {
-        outDir: join(srcRoot, '/out'),
+        outDir: join(srcRoot, '/.out'),
         emptyOutDir: true,
         rollupOptions: {},
       },
@@ -22,7 +22,6 @@ export default ({ command }: ConfigEnv): UserConfig => {
         port: process.env.PORT === undefined ? 3000 : +process.env.PORT,
       },
       optimizeDeps: {
-        auto: true,
         exclude: ['path'],
       },
     };
@@ -30,13 +29,13 @@ export default ({ command }: ConfigEnv): UserConfig => {
   // PROD
   else {
     return {
-      base: `${__dirname}/src/out/`,
+      base: `${__dirname}/src/.out/`,
       plugins: [reactRefresh()],
       alias: {
         '/@': srcRoot,
       },
       build: {
-        outDir: join(srcRoot, '/out'),
+        outDir: join(srcRoot, '/.out'),
         emptyOutDir: true,
         rollupOptions: {},
       },
@@ -44,7 +43,6 @@ export default ({ command }: ConfigEnv): UserConfig => {
         port: process.env.PORT === undefined ? 3000 : +process.env.PORT,
       },
       optimizeDeps: {
-        auto: true,
         exclude: ['path'],
       },
     };

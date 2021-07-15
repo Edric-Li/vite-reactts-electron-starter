@@ -1,5 +1,6 @@
 // Native
 import { join } from 'path';
+import './lib/autoUpdater';
 
 // Packages
 import { BrowserWindow, app, ipcMain, IpcMainEvent } from 'electron';
